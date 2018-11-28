@@ -15,6 +15,7 @@ attr_accessor :customer_wallet, :customer_drinks, :drunkenness
   def buy_a_drink(drink_type, pub)
     if pub.verify_age(@customer_age) && pub.verify_drunkenness(@drunkenness)
       @customer_drinks << drink_type
+      pub.stock_decrement(drink_type.drink_name) 
       @drunkenness += drink_type.units
       @customer_wallet -= drink_type.drink_price
       pub.pub_till += drink_type.drink_price

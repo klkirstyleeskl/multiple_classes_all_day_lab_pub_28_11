@@ -13,6 +13,10 @@ class TestCustomer < Minitest::Test
     @customer_2 = Customer.new("Josie", 100.50, [], 17, 0)
     @customer_3 = Customer.new("Colin", 12.50, [], 27, 12)
 
+    @pub_stock = {"Guinness" => 10, "Peroni" => 3, "Tequila" => 40,
+      "Whisky" => 50, "French Martini" => 25, "White Wine" => 27
+    }
+    
     @guiness = Drink.new("Guinness", 3.60, 2)
     @peroni = Drink.new("Peroni", 4.80, 3)
     @tequila = Drink.new("Tequila", 2.00, 1)
