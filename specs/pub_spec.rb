@@ -28,9 +28,9 @@ class TestPub < Minitest::Test
     assert_equal(500.00, @pub.pub_till)
   end
 
-  # def test_buy_a_drink
-  #   @customer_1.buy_a_drink(@guiness)
-  # end
+  def test_buy_a_drink
+    @customer_1.buy_a_drink(@guiness)
+  end
 
 
 

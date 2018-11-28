@@ -9,7 +9,10 @@ attr_accessor :customer_wallet, :customer_drinks
     @customer_drinks = customer_drinks
   end
 
-
+  def buy_a_drink(drink_type)
+    @customer_drinks << drink_type
+    @customer_wallet -= drink_type.drink_price
+  end
 
 
 
