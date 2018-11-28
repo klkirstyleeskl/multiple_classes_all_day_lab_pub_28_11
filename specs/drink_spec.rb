@@ -5,12 +5,12 @@ require_relative('../drink')
 class TestDrink < Minitest::Test
 
   def setup
-    @guiness = Drink.new("Guinness", 3.60)
-    @peroni = Drink.new("Peroni", 4.80)
-    @tequila = Drink.new("Tequila", 2.00)
-    @whisky = Drink.new("Whisky", 3.00)
-    @french_martini = Drink.new("French Martini", 8.00)
-    @white_wine = Drink.new("White Wine", 4.20)
+    @guiness = Drink.new("Guinness", 3.60, 2)
+    @peroni = Drink.new("Peroni", 4.80, 3)
+    @tequila = Drink.new("Tequila", 2.00, 1)
+    @whisky = Drink.new("Whisky", 3.00, 1)
+    @french_martini = Drink.new("French Martini", 8.00, 4)
+    @white_wine = Drink.new("White Wine", 4.20, 3)
   end
 
 
@@ -23,7 +23,9 @@ class TestDrink < Minitest::Test
   end
 
 
-
+  def test_get_drink_units
+    assert_equal(3, @peroni.units)
+  end
 
 
 
