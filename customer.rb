@@ -23,8 +23,14 @@ attr_accessor :customer_wallet, :customer_drinks, :drunkenness
     end
   end
 
-
-
+  def buy_food(meal, pub)
+    @customer_wallet -= meal.price
+    if @drunkenness >= meal.rejuvenation
+      @drunkenness -= meal.rejuvenation
+    else @drunkenness = 0
+  end
+      pub.pub_till += meal.price
+  end
 
 
 
